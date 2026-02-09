@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-main: #0B0B0D;
+    --bg-surface: #141417;
+    --text-primary: #EDEDED;
+    --text-muted: #9A9AA0;
+    --accent: #C9A24D;
+    --radius: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    font-family: 'Inter', system-ui, sans-serif;
+    margin: 0;
+    padding: 24px;
+    color: var(--text-primary);
+}
+
+main {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* ---------- FRONT PAGE ---------- */
+
+.frontpage {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    text-align: center;
+}
+
+.frontpage h1 {
+    font-size: clamp(42px, 6vw, 64px);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    text-transform: lowercase;
+}
+
+.logo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: radial-gradient(circle at top, #1c1c22, #0f0f12);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.frontpage button {
+    padding: 14px 36px;
+    background-color: var(--accent);
+    color: #0B0B0D;
+    border: none;
+    border-radius: 999px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.frontpage button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(201,162,77,0.35);
+}
+
+/* ---------- SECOND PAGE ---------- */
+
+.secondpage {
+    display: none;
+    margin: 80px auto;
+    padding: 80px 6vw;
+    background-color: var(--bg-surface);
+    border-radius: 32px;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+}
+
+.secondpage h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.secondpage p {
+    color: var(--text-muted);
+    max-width: 620px;
+    margin-bottom: 64px;
+}
+
+/* ---------- TEAM ---------- */
+
+.team h2 {
+    margin-bottom: 24px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+/* ---------- CARDS ---------- */
+
+.card {
+    background: #16161A;
+    border-radius: var(--radius);
+    padding: 24px;
+    text-align: center;
+    transition: 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.04);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.card img {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.card h2 {
+    font-size: 18px;
+}
+
+.card p {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* ---------- SHOW MORE BUTTON ---------- */
+
+.show-more-btn {
+    margin: 48px auto 0;
+    padding: 14px 34px;
+    background: transparent;
+    border: 1px solid rgba(201,162,77,0.5);
+    color: var(--accent);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    display: block;
+}
+
+.show-more-btn:hover {
+    background-color: var(--accent);
+    color: #0B0B0D;
+    box-shadow: 0 14px 30px rgba(201,162,77,0.35);
+}
